@@ -6,3 +6,11 @@ img#self {
   -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.75);
 }
+code a {
+  font-size: 110%;
+  color: #0645AD;
+}
+code a:hover {
+  color: #0B0080;
+  text-decoration: none;
+}
