@@ -1,0 +1,41 @@
+#nav {
+  line-height: 30px;
+  background-color: transparent;
+  height: auto;
+  width: 21%;
+  float: left;
+  margin-top: 5vh;
+  position: absolute;
+}
+nav {
+  line-height: 30px;
+  background-color: transparent;
+  height: auto;
+  width: 60%;
+  padding: 8px;
+  margin: auto;
+}
+span.button {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  width: 100%;
+  background: #0000CD;
+	cursor: pointer;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration:none;
+  transition: background .3s;
+}
+span.button:hover {
+	background:#0000FF;
+}
+span.button:active {
+	position: relative;
+	top: 1px;
+}

@@ -1,2 +1,8 @@
-<h1>Pages#resume</h1>
-<p>Find me in app/views/pages/resume.html.erb</p>
+<div class="resume-container">
+  <a id="download-resume" href=<%= asset_url('resume_cruz_nunez.pdf') %> download>
+    <div class="icon">
+      <i class="fa fa-download"></i>
+    </div>
+    <%= image_tag 'resume_cruz_nunez.jpg', id: 'resume' %>
+  </a>
+</div>

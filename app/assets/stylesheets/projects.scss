@@ -1,0 +1,23 @@
+img#jam-connect {
+  transition: box-shadow 0.15s;
+}
+img#jam-connect:hover {
+  /*opacity: .9;*/
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
+}
+.triplets {
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+}
+a.pop{
+  color: inherit;
+  transition: font-size .3s, text-shadow .3s;
+}
+a.pop:hover {
+  text-decoration: none;
+  font-size: 110%;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}

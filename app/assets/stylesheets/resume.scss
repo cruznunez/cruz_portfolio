@@ -1,0 +1,23 @@
+div.resume-container {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  padding-top: 1em;
+}
+div.icon {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 200px;
+}
+img#resume {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+}
+div.resume-container:hover div.icon{
+  visibility: visible;
+}

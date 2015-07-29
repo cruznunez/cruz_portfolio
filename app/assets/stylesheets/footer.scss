@@ -1,0 +1,17 @@
+div.container-black {
+  position: absolute;
+  background: white;
+  color: black;
+  padding: 10px;
+  z-index: 1;
+}
+a.stretch2 {
+  font-size: 18px;
+  color: inherit;
+  transition: letter-spacing .3s, text-shadow .3s;
+}
+a.stretch2:hover {
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: 0 0 1px gray;
+}

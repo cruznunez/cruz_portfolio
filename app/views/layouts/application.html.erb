@@ -8,8 +8,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'layouts/header' %>
+  <%= render 'layouts/navigation' %>
 
-<%= yield %>
-
+  <section class="main-content">
+    <%= yield %>
+  </section>
+  
+  <% unless @page == 'Home' %>
+    <%= render 'layouts/footer' %>
+  <% end %>
 </body>
 </html>
