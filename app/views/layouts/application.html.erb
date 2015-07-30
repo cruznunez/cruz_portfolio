@@ -7,14 +7,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<%= @page != 'Home' ? '<body>'.html_safe : '<body style="padding-bottom:0;">'.html_safe %>
   <%= render 'layouts/header' %>
   <%= render 'layouts/navigation' %>
-
   <section class="main-content">
     <%= yield %>
   </section>
-  
   <% unless @page == 'Home' %>
     <%= render 'layouts/footer' %>
   <% end %>

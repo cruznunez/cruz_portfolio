@@ -23,19 +23,19 @@ span.button {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   width: 100%;
-  background: #2222CD;
-	cursor: pointer;
-	color: #fff;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 6px 24px;
-	text-decoration:none;
-  transition: background .3s;
+  background: #2222cd;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 span.button:hover {
-	background:#0000FF;
+  background: #00f;
 }
 span.button:active {
-	position: relative;
-	top: 1px;
+  position: relative;
+  top: 1px;
 }
