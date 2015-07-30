@@ -7,13 +7,13 @@ a.white-underline:hover {
 div.container-white {
   position: absolute;
   background: transparent;
-  padding: 10px;
+  padding: 10px 5%;
   color: white;
   transform: translateY(-100%);
 }
 div.container {
   display: table;
-  width: 90%;
+  width: 100%;
   left:0;
   right:0;
   margin:auto;
@@ -74,6 +74,7 @@ div.container span:last-child {
   color: #fff;
   text-align: center;
   background: #2222CD;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 1);
 }
 @media screen and (min-width: 64em) {
   .page-header {
