@@ -1,11 +1,17 @@
 img#jam-connect {
+}
+.shadow {
   transition: box-shadow 0.15s;
 }
-img#jam-connect:hover {
-  /*opacity: .9;*/
+.shadow:hover {
   -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
+}
+.twins {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
 }
 .triplets {
   display: inline-block;
