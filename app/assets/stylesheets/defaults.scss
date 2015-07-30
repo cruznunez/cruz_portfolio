@@ -1,14 +1,6 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-section h3 a.project-title {
-  font-size: 1.3em;
-  color: inherit;
-  transition: font-size .3s;
-}
-section h3 a.project-title:hover {
-  font-size: 1.5em;
-}
 .main-content:first-child {
   margin-top: 0;
 }
@@ -19,7 +11,7 @@ section h3 a.project-title:hover {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
-  color:  #0000CD;
+  color:  #2222CD;
 ;
 }
 .main-content p {

@@ -1,12 +1,13 @@
 img#jam-connect {
 }
 .shadow {
-  transition: box-shadow 0.15s;
+  transition: box-shadow 0.15s, opacity .15s;
 }
 .shadow:hover {
-  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.75);
+  opacity: .98;
 }
 .twins {
   display: inline-block;
@@ -25,5 +26,12 @@ a.pop{
 a.pop:hover {
   text-decoration: none;
   font-size: 110%;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+section h3 a.project-title {
+  font-size: 1.3em;
+  color: inherit;
+}
+section h3 a.project-title:hover {
+  border-bottom: 2.5px solid #2222CD;
 }

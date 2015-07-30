@@ -5,13 +5,10 @@ div.container-black {
   padding: 10px;
   z-index: 1;
 }
-a.stretch2 {
-  font-size: 18px;
+a.black-underline {
   color: inherit;
-  transition: letter-spacing .3s, text-shadow .3s;
 }
-a.stretch2:hover {
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 0 1px gray;
+a.black-underline:hover {
+  padding-bottom: 1px;
+  border-bottom: 2px solid #000;
 }
