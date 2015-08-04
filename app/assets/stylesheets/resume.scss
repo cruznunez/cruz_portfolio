@@ -16,9 +16,9 @@ div.icon {
   font-size: 200px;
 }
 img#resume {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 2.5px 0 rgba(0, 0, 0, .5);
 }
 div.resume-container:hover div.icon{
   visibility: visible;
-  opacity: .75;
+  opacity: .65;
 }
