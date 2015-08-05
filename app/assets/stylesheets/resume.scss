@@ -7,18 +7,18 @@ div.resume-container {
   padding-top: 1em;
 }
 div.icon {
-  visibility: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  font-size: 200px;
+  font-size: 300px;
+  opacity: 0.0039216;
+  transition: opacity 0.15s;
 }
 img#resume {
   box-shadow: 0 0 2.5px 0 rgba(0, 0, 0, .5);
 }
 div.resume-container:hover div.icon{
-  visibility: visible;
-  opacity: .65;
+  opacity: 0.6;
 }
