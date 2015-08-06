@@ -1,28 +1,26 @@
-== README
+# My portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to my portfolio as a software developer. Most of this work was created while I was studying at The Iron Yard, Durham, NC during the Summer of 2015.
 
-Things you may want to cover:
+The app features a brief self-summary, a collection of some of the projects I have worked on, and a downloadable copy of my resumé.
 
-* Ruby version
+## Home
 
-* System dependencies
+The home page features a picture of me and my short self-summary.
 
-* Configuration
+## Projects
 
-* Database creation
+All the projects have screen shots. All the projects are live on the web. All the technologies used to create projects link out to their respective web pages. Please keep in mind that during my time at The Iron Yard, we worked on many projects, but only some of those projects went into production level, on a live site.
 
-* Database initialization
+## Resumé
 
-* How to run the test suite
+This page will show you my resumé on the site. Anyone can download it by simply clicking on the image.
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Technologies:
 
-* Deployment instructions
+* [Ruby on Rails](http://rubyonrails.org/)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [jQuery](https://jquery.com/)
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# [Live Site](http://cruznunez.io/)
