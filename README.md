@@ -2,7 +2,7 @@
 
 Welcome to my portfolio as a software developer. Most of this work was created while I was studying at The Iron Yard, Durham, NC during the Summer of 2015.
 
-The app features a brief self-summary, a collection of some of the projects I have worked on, and a downloadable copy of my resumé.
+The app features my contact info in the header and footer, a brief self-summary, a collection of some of the projects I have worked on, and a downloadable copy of my resumé.
 
 ## Home
 
