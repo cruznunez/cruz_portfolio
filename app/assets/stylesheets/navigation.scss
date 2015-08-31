@@ -1,3 +1,44 @@
+@import 'sass';
+@include mobile {
+  #nav {
+    bottom: 0 !important;
+    width: 100% !important;
+    background-color: white !important;
+    margin: 0 !important;
+    line-height: 18px !important;
+    border-top: 1px solid #BBBBBB;
+    height: 45px !important;
+    z-index: 9999;
+    position: fixed !important;
+  }
+  nav {
+    width: 100% !important;
+    padding: 7px 0 0 !important;
+  }
+  .button {
+    width: 32% !important;
+    margin: 0 !important;
+    color: #8899A6 !important;
+    background-color: white !important;
+    padding: 0 !important;
+    font-size: .8em !important;
+  }
+  .button i {
+    display: block !important;
+    line-height: .8 !important;
+    font-size: 1.7em;
+  }
+  i.fa.fa-file-code-o {
+    font-size: 1.5em !important;
+  }
+}
+
+@include tablet {
+  nav {
+    width: 80% !important;
+  }
+}
+
 #nav {
   line-height: 30px;
   background-color: transparent;
@@ -6,16 +47,18 @@
   float: left;
   margin-top: 5vh;
   position: absolute;
+  .button i {
+    display: none;
+  }
 }
 nav {
-  line-height: 30px;
   background-color: transparent;
   height: auto;
   width: 60%;
   padding: 8px;
   margin: auto;
 }
-span.button {
+.button {
   display: inline-block;
   text-align: center;
   margin-bottom: 8px;
@@ -28,14 +71,14 @@ span.button {
   color: #fff;
   font-size: 15px;
   font-weight: bold;
-  padding: 6px 24px;
+  padding: 6px 0;
   text-decoration: none;
   transition: background 0.3s;
-}
-span.button:hover {
-  background: #00f;
-}
-span.button:active {
-  position: relative;
-  top: 1px;
+  &:hover {
+    background: #00f;
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
 }
