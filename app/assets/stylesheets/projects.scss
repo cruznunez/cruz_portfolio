@@ -27,9 +27,14 @@ img#jam-connect {
   vertical-align: top;
 }
 @include mobile {
+  .main-content {
+    padding-bottom: 0;
+    .project:first-child h3 {
+      margin-top: 0 !important;
+    }
+  }
   .adjustable {
-    // font-size: .97em;
-    letter-spacing: -.3px;  
+    letter-spacing: -.3px;
   }
   .text {
     display: none;
