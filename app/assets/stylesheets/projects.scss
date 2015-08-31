@@ -27,6 +27,10 @@ img#jam-connect {
   vertical-align: top;
 }
 @include mobile {
+  .adjustable {
+    // font-size: .97em;
+    letter-spacing: -.3px;  
+  }
   .text {
     display: none;
   }
@@ -45,7 +49,7 @@ img#jam-connect {
   }
 }
 @include immobile {
-  .test-mobile {
+  .text-mobile {
     display: none;
   }
 }
