@@ -40,11 +40,11 @@ function placeInitialBlackContactInfo() {
 }
 
 function resetColor() {
-  $(window).on("load",function() {
+  $(window).on("load", function() {
     css = $('style').last().html();
   });
 
-  $(window).on("load resize",function(e){
+  $(window).on("load resize", function(e){
     if ($(window).width() > 672) {
       $('style').last().html("");
     } else {

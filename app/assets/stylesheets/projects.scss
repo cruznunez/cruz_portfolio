@@ -1,3 +1,4 @@
+@import 'sass';
 .blue-underline {
   color: #2222CD;
 }
@@ -24,6 +25,21 @@ img#jam-connect {
   display: inline-block;
   width: 32%;
   vertical-align: top;
+}
+@include mobile {
+  .project .triplets {
+  width: 49%;
+    &:nth-of-type(3) {
+      clear: left;
+      display: block;
+      width: 100%;
+      .mobile-twin {
+        width: 49%;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
 }
 a.pop{
   color: inherit;
