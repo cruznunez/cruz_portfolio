@@ -53,6 +53,10 @@
   background: transparent;
   padding: 10px 0;
   color: white;
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
   transform: translateY(-100%);
   z-index: 9999;
 }
