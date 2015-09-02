@@ -28,7 +28,7 @@ img#jam-connect {
 }
 @include mobile {
   .main-content {
-    padding-bottom: 0;
+    // padding-bottom: 0;
     .project:first-child h3 {
       margin-top: 0 !important;
     }
