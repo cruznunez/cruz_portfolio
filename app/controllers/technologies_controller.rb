@@ -4,7 +4,7 @@ class TechnologiesController < ApplicationController
 
   # GET /technologies
   def index
-    @technologies = Technology.all.order(name: :asc)
+    @technologies = Technology.all.order("LOWER(name)")
   end
 
   # GET /technologies/new
