@@ -30,7 +30,7 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <% if request.path.include?("edit") %>
+  <% if @project.id %>
     <div id="<%= @project.id %>" class="project">
       <%= render partial: "technologies", locals: { project: @project } %>
       <%= render partial: "add_tech", locals: { project: @project } %>
