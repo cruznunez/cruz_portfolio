@@ -1,5 +1,5 @@
 <% tech = @project ? @project.technologies : project.technologies %>
-<% tech = tech.reverse if Rails.env.production? %>
+<% tech = tech.sort_by{ |tech| tech.name.downcase } %>
 <div class="technologies">
   <% if tech.any? %>
     <p>
