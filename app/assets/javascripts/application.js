@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 function lockNav() {
   var headerHeight = $('.page-header').outerHeight( true );
@@ -28,13 +27,6 @@ function masterLock() {
   $( window ).on("resize scroll",lockNav);
 };
 
-function makeAllLinksOpenInNewWindowExceptForNavigation() {
-  $('a').attr('target', '_blank');
-  $('nav a').attr('target', '_self');
-  $('a.email').attr('target', '_self');
-  $('a.phone').attr('target', '_self');
-};
-
 function placeInitialBlackContactInfo() {
   var headerHeight = $('.page-header').outerHeight( true );
   var windowHeight = $(window).height();
@@ -43,6 +35,47 @@ function placeInitialBlackContactInfo() {
   $('div.container-black').css('top', blackHeight );
 }
 
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e){
+      $('.project-pic').attr('src', e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  };
+};
+
+function showChosenProjectPic() {
+  $("#projectPicFileField").change(function () {
+    readURL(this);
+  });
+};
+
+function addTechToProject() {
+  $("select#add").change( function() {
+    var project_id = $(this).closest(".project").attr("id");
+    var tech_id = $("select#add option:selected")[0].value;
+    $.ajax({
+      url: "/projects/" + project_id + "/add_tech/" + tech_id,
+      type: "PATCH",
+    });
+  });
+};
+
+function rmTechFromProject() {
+  $("select#rm").change( function() {
+    var project_id = $(this).closest(".project").attr("id");
+    var tech_id = $("select#rm option:selected")[0].value;
+    $.ajax({
+      url: "/projects/" + project_id + "/rm_tech/" + tech_id,
+      type: "DELETE",
+    });
+  });
+};
+
 $(placeInitialBlackContactInfo);
 $(masterLock);
-$(makeAllLinksOpenInNewWindowExceptForNavigation);
+$(showChosenProjectPic);
+$(addTechToProject);
+$(rmTechFromProject);
+$(keyBoardListener);

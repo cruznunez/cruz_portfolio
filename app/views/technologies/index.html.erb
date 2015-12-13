@@ -1,0 +1,27 @@
+<div class="flex-container">
+  <h1 class="topless">Technologies</h1>
+  <%= link_to 'New Technology', new_technology_path, class: "flex-right" %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Long name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @technologies.each do |technology| %>
+      <tr>
+        <td><%= technology.name %></td>
+        <td><%= technology.long_name %></td>
+        <td><%= link_to 'Edit', edit_technology_path(technology) %></td>
+        <td><%= link_to 'Destroy', technology, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

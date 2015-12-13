@@ -1,0 +1,6 @@
+<div class="rm-tech-field">
+  <% if project.technologies.any? %>
+    <label class="red">Remove a technology</label>
+    <%= select_tag :technologies, options_from_collection_for_select(project.technologies.order(:name), 'id', 'name'), id: "rm", include_blank: true %>
+  <% end %>
+</div>

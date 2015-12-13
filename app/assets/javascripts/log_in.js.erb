@@ -1,0 +1,23 @@
+function logIn() {
+  window.location.href = "/log_in";
+};
+
+function logOut() {
+  window.location.href = "/log_out";
+};
+
+function users() {
+  window.location.href = "/users";
+};
+
+function tech() {
+  window.location.href = "/technologies";
+};
+
+function keyBoardListener() {
+  listener = new window.keypress.Listener();
+  listener.sequence_combo("l o g i n", logIn);
+  listener.sequence_combo("l o g o u t", logOut);
+  listener.sequence_combo("u s e r s", users);
+  listener.sequence_combo("t e c h", tech);
+};

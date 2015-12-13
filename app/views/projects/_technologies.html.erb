@@ -1,0 +1,45 @@
+<% tech = project.technologies %>
+<div class="technologies">
+  <% if tech.any? %>
+    <p>
+      Technologies:
+    </p>
+    <% if ( tech.count % 3 == 1 ) || ( tech.count == 2 ) %>
+      <% left, right = tech.twos %>
+      <div class="twins">
+        <% left.each do |technology| %>
+          <%= link technology %>
+        <% end %>
+      </div>
+      <div class="twins">
+        <% right.each do |technology| %>
+          <%= link technology %>
+        <% end %>
+      </div>
+    <% else %>
+      <% col_1, col_2, sub_col_3, sub_col_4 = tech.fours %>
+      <div class="triplets">
+        <% col_1.each do |technology| %>
+          <%= link technology %>
+        <% end %>
+      </div>
+      <div class="triplets">
+        <% col_2.each do |technology| %>
+          <%= link technology %>
+        <% end %>
+      </div>
+      <div class="triplets">
+        <div class="mobile-twin">
+          <% sub_col_3.each do |technology| %>
+            <%= link technology %>
+          <% end %>
+        </div>
+        <div class="mobile-twin">
+          <% sub_col_4.each do |technology| %>
+            <%= link technology %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

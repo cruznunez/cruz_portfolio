@@ -1,0 +1,24 @@
+@import 'sass';
+.pagination {
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  @include immobile {
+    margin: 0 auto;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+.current, .first, .last, .next, .prev {
+  display: table-cell;
+  @include immobile {
+    min-width: 25px;
+  }
+}
+.page {
+  display: none;
+}
+.page.current {
+  display: table-cell;
+}

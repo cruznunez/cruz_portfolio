@@ -1,5 +1,13 @@
-.main-content:first-child {
-  margin-top: 0;
+.blue,
+.blue-link {
+  color: #2222CD;
+}
+.red {
+  color: #EA4335;
+}
+.main-content:first-child,
+.topless {
+  margin-top: 0 !important;
 }
 .main-content img {
   max-width: 100%;
@@ -84,7 +92,7 @@
   margin-bottom: 0;
 }
 .main-content table {
-  display: block;
+  border-collapse: collapse;
   width: 100%;
   overflow: auto;
   word-break: normal;
@@ -94,7 +102,7 @@
   font-weight: bold;
 }
 .main-content table th, .main-content table td {
-  padding: 0.5rem 1rem;
+  padding: 0;
   border: 1px solid #e9ebec;
 }
 .main-content dl {

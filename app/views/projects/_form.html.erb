@@ -1,0 +1,55 @@
+<%= form_for @project, html: { multipart: true } do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, autofocus: request.path.include?("new") %>
+  </div>
+  <% if @project.id %>
+    <div>
+      <%= f.label :order %><br>
+      <%= f.number_field :order, value: f.object.order || f.object.id %>
+    </div>
+  <% end %>
+  <div class="project-pic-field">
+    <label>Project Image</label>
+    <%= f.file_field :image, accept: 'image/png,image/jpeg,image/gif', id: 'projectPicFileField' %><br>
+    <%= image_tag @project.image.url, class: "project-pic" %>
+  </div>
+  <div>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <% if request.path.include?("edit") %>
+    <div id="<%= @project.id %>" class="project">
+      <%= render partial: "technologies", locals: { project: @project } %>
+      <%= render partial: "add_tech", locals: { project: @project } %>
+      <%= render partial: "rm_tech", locals: { project: @project } %>
+    </div>
+  <% end %>
+  <div>
+    <%= f.label :live_site %><br>
+    <%= f.text_field :live_site %>
+  </div>
+  <div>
+    <%= f.label :repo_url %><br>
+    <%= f.text_field :repo_url %>
+  </div>
+  <div>
+    <%= f.label :additional_information %><br>
+    <%= f.text_area :additional_information %>
+  </div>
+  <div class="actions">
+    <%= f.submit class: "big-button" %>
+  </div>
+<% end %>

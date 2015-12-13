@@ -1,0 +1,72 @@
+class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user, except: :index
+
+  # GET /projects
+  def index
+    @page = "Projects"
+    @projects = Project.all.order(order: :desc).page(params[:page]).per(5)
+  end
+
+  # GET /projects/new
+  def new
+    @project = Project.new
+    @technologies = Technology.all
+  end
+
+  # GET /projects/1/edit
+  def edit
+    @technologies = Technology.all
+  end
+
+  # POST /projects
+  def create
+    @project = Project.new(project_params)
+
+    if @project.save
+      redirect_to edit_project_path(@project), notice: 'Project was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  # PATCH/PUT /projects/1
+  def update
+    if @project.update(project_params)
+      redirect_to projects_path, notice: 'Project was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  # DELETE /projects/1
+  def destroy
+    @project.destroy
+    redirect_to projects_url, notice: 'Project was successfully destroyed.'
+  end
+
+  def add_tech
+    @project = Project.find( params[:id] )
+    technology = Technology.find( params[:tech_id] )
+    @project.technologies.delete(technology)
+    @project.technologies << technology
+    render 'update_project.js.erb'
+  end
+
+  def rm_tech
+    @project = Project.find( params[:id] )
+    @project.technologies.destroy( Technology.find( params[:tech_id] ))
+    render 'update_project.js.erb'
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_project
+      @project = Project.find(params[:id])
+    end
+
+    # Only allow a trusted parameter "white list" through.
+    def project_params
+      params.require(:project).permit(:name, :order, :description, :image, :additional_information, :repo_url, :live_site)
+    end
+end
