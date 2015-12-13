@@ -32,9 +32,9 @@
   </div>
   <% if @project.id %>
     <div id="<%= @project.id %>" class="project">
-      <%= render partial: "technologies", locals: { project: @project } %>
-      <%= render partial: "add_tech", locals: { project: @project } %>
-      <%= render partial: "rm_tech", locals: { project: @project } %>
+      <%= render "technologies" %>
+      <%= render "add_tech" %>
+      <%= render "rm_tech" %>
     </div>
   <% end %>
   <div>
