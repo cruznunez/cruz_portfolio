@@ -5,7 +5,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   def index
     @page = "Projects"
-    @projects = Project.all.order(order: :desc).page(params[:page]).per(5)
+    @projects = Project.all.order(order: :desc).page(params[:page]).per(3)
   end
 
   # GET /projects/new
