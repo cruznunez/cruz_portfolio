@@ -36,7 +36,7 @@ module ApplicationHelper
   end
 
   def site_color(color = nil)
-    color ||= Site.first.color
+    color ||= Site.first.color rescue 'blue'
     %Q(
       <style>
         .page-header {
