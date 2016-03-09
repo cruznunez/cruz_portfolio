@@ -116,9 +116,8 @@
 .page-header {
   color: #fff;
   text-align: center;
-  background: #2222CD;
-  // background: #1C3965;
-  border-bottom: 1.5px solid rgba(0, 0, 0, 1);
+  background: $site-color;
+  transition: all .3s;
 }
 @media screen and (min-width: 64em) {
   .page-header {

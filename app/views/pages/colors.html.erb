@@ -1,0 +1,11 @@
+<h3>Choose a site color</h3>
+
+<form method="post" action="colors">
+  <%= text_field_tag :color, @color %>
+  <div class="actions">
+    <%= submit_tag 'Save color', class: 'big-button update-button' %>
+  </div>
+  <script>
+    colorPicker()
+  </script>
+</form>

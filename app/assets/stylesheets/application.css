@@ -2,6 +2,7 @@
  *= require_tree
  *= require_self
  *= require font-awesome
+ *= require jquery.minicolors
 */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);

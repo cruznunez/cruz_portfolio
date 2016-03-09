@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <div class="flex-container">
-    <%= link_to new_project_path, id: 'add-project', class: 'blue-link flex-right' do %>
+    <%= link_to new_project_path, id: 'add-project', class: 'flex-right' do %>
       <i class="fa fa-plus"></i> Add Project
     <% end %>
   </div>
@@ -13,14 +13,14 @@
         <%= link_to project.name, project.live_site, class: "project-title", target: "_blank" %>
       </h3>
       <% if logged_in? %>
-        <%= link_to edit_project_path(project), class: 'blue-link flex-right' do %>
+        <%= link_to edit_project_path(project), class: 'edit-project flex-right' do %>
           <i class="fa fa-pencil"></i> Edit
         <% end %>
       <% end %>
     </div>
     <% if project.image.present? %>
       <%= link_to project.live_site, target: "_blank" do %>
-        <%= image_tag project.image.url.gsub('s3', 's3-us-west-2'), class: 'shadow'%>
+        <%= image_tag project.image.link, class: 'shadow'%>
       <% end %>
     <% end %>
     <p>
@@ -29,20 +29,16 @@
     <%= render "technologies", project: project %>
     <div>
       <div class="twins">
-        <p>
-          <%= link_to project.live_site, class: "pop", target: "_blank" do %>
-            <i class="fa fa-hand-o-up fa-lg project-icon"></i>
-            Live Site
-          <% end %>
-        </p>
+        <%= link_to project.live_site, class: "pop", target: "_blank" do %>
+          <i class="fa fa-hand-o-up fa-lg project-icon"></i>
+          Live Site
+        <% end %>
       </div>
       <div class="twins">
-        <p>
-          <%= link_to project.repo_url, class: "pop", target: "_blank" do %>
-            <i class="fa fa-github-square fa-lg project-icon"></i>
-            Github Repo
-          <% end %>
-        </p>
+        <%= link_to project.repo_url, class: "pop", target: "_blank" do %>
+          <i class="fa fa-github-square fa-lg project-icon"></i>
+          Github Repo
+        <% end %>
       </div>
     </div>
     <% if project.additional_information.present? %>

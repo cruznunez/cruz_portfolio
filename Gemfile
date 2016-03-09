@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'tzinfo-data'#used for Windows timezone bug
 gem 'coffee-script-source', '1.8.0'#used for windows javascript_include_tag bug
 gem 'rails', '4.2.1'
+gem 'jquery-minicolors-rails'
 gem 'font-awesome-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

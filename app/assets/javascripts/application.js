@@ -1,4 +1,5 @@
 //= require jquery
+//= require jquery.minicolors
 //= require jquery_ujs
 //= require_tree .
 function lockNav() {

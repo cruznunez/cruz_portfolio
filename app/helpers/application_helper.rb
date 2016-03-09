@@ -29,10 +29,45 @@ module ApplicationHelper
   end
 
   def navigation(page)
-    href = {"Home" => "/", "Projects" => "/projects", "Resumé" => "/resume" }[page]
-    css_class = @page == page ? "button selected" : "button"
-    icon_class = {"Home" => "fa fa-home", "Projects" => "fa fa-file-code-o", "Resumé" => "fa fa-check-square-o" }[page]
+    href = {'Home' => '/', 'Projects' => '/projects', 'Resumé' => '/resume', 'Colors' => '/colors'}[page]
+    css_class = @page == page ? 'button selected' : 'button'
+    icon_class = {'Home' => 'fa fa-home', 'Projects' => 'fa fa-file-code-o', 'Resumé' => 'fa fa-check-square-o' }[page]
     "<a href='#{href}'><span class='#{css_class}'><i class='#{icon_class}'></i>#{page}</span></a>".html_safe
+  end
+
+  def site_color(color = nil)
+    color ||= Site.first.color
+    %Q(
+      <style>
+        .page-header {
+          background: #{color};
+        }
+        .main-content p a, .main-content h3, .main-content h2, .main-content p a:hover {
+          color: #{color};
+        }
+        .main-content p a:hover {
+          border-color: #{color};
+        }
+        .tumblr-input:focus {
+          border-color: #{color};
+        }
+        @media (min-width: 673px) {
+          .button,
+          .big-button {
+            background: #{color};
+            border-color: #{color};
+          }
+          .button:hover, .big-button:hover {
+            color: #{color};
+          }
+        }
+        @media only screen and (min-width: 1px) and (max-width: 672px) {
+          .selected {
+            color: #{color};
+          }
+        }
+      </style>
+    ).html_safe
   end
 
   def title(title = nil, output = nil)

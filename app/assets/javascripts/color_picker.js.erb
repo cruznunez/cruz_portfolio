@@ -1,0 +1,13 @@
+function colorPicker() {
+  $('#color').minicolors()
+  $("#color").change(function () {
+    color = this.value
+    $.ajax({
+      url: "/site_color",
+      type: "GET",
+      data: {
+        'color' : color
+      }
+    });
+  });
+}

@@ -1,7 +1,10 @@
 <div id="nav">
   <nav>
-    <%= navigation "Home" %>
-    <%= navigation "Projects" %>
-    <%= navigation "Resumé" %>
+    <%= navigation 'Home' %>
+    <%= navigation 'Projects' %>
+    <%= navigation 'Resumé' %>
+    <% if logged_in? %>
+      <%= navigation 'Colors' %>
+    <% end %>
   </nav>
 </div>

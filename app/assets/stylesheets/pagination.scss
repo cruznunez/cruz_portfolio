@@ -22,3 +22,8 @@
 .page.current {
   display: table-cell;
 }
+.first, .prev, .next, .last {
+  a {
+    color: $site-color !important;
+  }
+}

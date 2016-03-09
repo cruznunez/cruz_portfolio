@@ -24,7 +24,7 @@
   <div class="project-pic-field">
     <label>Project Image</label>
     <%= f.file_field :image, accept: 'image/png,image/jpeg,image/gif', id: 'projectPicFileField' %><br>
-    <%= image_tag @project.image.url, class: "project-pic" %>
+    <%= image_tag @project.image.link, class: "project-pic" %>
   </div>
   <div>
     <%= f.label :description %><br>
@@ -50,6 +50,6 @@
     <%= f.text_area :additional_information %>
   </div>
   <div class="actions">
-    <%= f.submit class: "big-button" %>
+    <%= f.submit class: "big-button update-button" %>
   </div>
 <% end %>

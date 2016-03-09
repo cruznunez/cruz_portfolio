@@ -1,9 +1,6 @@
 @import 'sass';
-.blue-underline {
-  color: #2222CD;
-}
-.blue-underline:hover {
-  border-bottom: 1px solid #2222CD;
+.technologies {
+  margin-bottom: 1em;
 }
 .shadow {
   transition: box-shadow 0.15s, opacity .15s;
@@ -74,8 +71,11 @@ section h3 a.project-title {
   font-size: 1.3em;
   color: inherit;
 }
-section h3 a.project-title:hover {
-  border-bottom: 2.5px solid #2222CD;
+section h3 a.project-title,
+.underline {
+  &:hover {
+    border-bottom: 2.5px solid $site-color;
+  }
 }
 .flex-container {
   display: -webkit-box;

@@ -1,6 +1,6 @@
 <div class="add-tech-field">
   <% if @project.technologies_left.any? %>
-    <label class="blue">Add a technology</label>
+    <label class="green">Add a technology</label>
     <%= select_tag :technologies,
         options_from_collection_for_select( @project.technologies_left.sort_by{ |tech| tech.name.downcase }, 'id', 'name' ),
         id: "add",

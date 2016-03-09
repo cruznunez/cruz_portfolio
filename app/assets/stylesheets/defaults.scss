@@ -1,23 +1,39 @@
+@import 'sass';
+#add-project,
+.green {
+  color: $green;
+}
+.edit-project {
+  color: $yellow;
+}
 .blue,
 .blue-link {
-  color: #2222CD;
+  color: $blue;
 }
 .red {
-  color: #EA4335;
+  color: $red;
 }
 .main-content:first-child,
 .topless {
   margin-top: 0 !important;
 }
-.main-content img {
-  max-width: 100%;
-}
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: normal;
-  color:  #2222CD;
-;
+.main-content {
+  h1,  h2,  h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: $site-color;
+  }
+  img {
+    max-width: 100%;
+  }
+  p a {
+    color: $site-color;
+    &:hover {
+      color: $site-color;
+      border-bottom:1px solid $site-color;
+    }
+  }
 }
 .main-content code {
   padding: 2px 4px;

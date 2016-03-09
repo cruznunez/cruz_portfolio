@@ -9,13 +9,14 @@
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
-<body>
+  <body>
+    <%= site_color %>
     <%= render 'layouts/header' %>
     <%= render 'layouts/navigation' %>
     <section class="main-content">
       <%= yield %>
     </section>
-    <% unless @page == 'Home' %>
+    <% unless %w[Home Colors].include? @page %>
       <%= render 'layouts/footer' %>
     <% end %>
   </body>
