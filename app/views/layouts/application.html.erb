@@ -4,7 +4,7 @@
     <% title @page %>
     <%= display_meta_tags %>
     <meta name="viewport" content="initial-scale=1">
-    <link rel="icon" href=<%= asset_url("logo.png") %>>
+    <link rel="icon" href="<%= asset_url 'logo.png' %>">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>

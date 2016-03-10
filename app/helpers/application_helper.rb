@@ -48,6 +48,9 @@ module ApplicationHelper
         .main-content p a:hover {
           border-color: #{color};
         }
+        .project-title:hover {
+          border-color: #{color}
+        }
         .tumblr-input:focus {
           border-color: #{color};
         }

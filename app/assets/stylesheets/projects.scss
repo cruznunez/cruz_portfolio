@@ -67,11 +67,11 @@ a.pop:hover {
   font-size: 110%;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
-section h3 a.project-title {
+.project-title {
   font-size: 1.3em;
   color: inherit;
 }
-section h3 a.project-title,
+.project-title,
 .underline {
   &:hover {
     border-bottom: 2.5px solid $site-color;
