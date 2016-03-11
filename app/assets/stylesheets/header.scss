@@ -76,17 +76,17 @@
 .project-name {
   margin: 0;
 }
-@media screen and (min-width: 64em) {
+@include desktop {
   .project-name {
     font-size: 3.25rem;
   }
 }
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@include tablet {
   .project-name {
     font-size: 2.25rem;
   }
 }
-@media screen and (max-width: 42em) {
+@include mobile {
   .project-name {
     font-size: 1.75rem;
   }
@@ -98,17 +98,17 @@
   font-weight: normal;
   opacity: 0.75;
 }
-@media screen and (min-width: 64em) {
+@include desktop {
   .project-tagline {
     font-size: 1.25rem;
   }
 }
-@media screen and (min-width: 42em) and (max-width: 64em) {
+@include tablet {
   .project-tagline {
     font-size: 1.15rem;
   }
 }
-@media screen and (max-width: 42em) {
+@include mobile {
   .project-tagline {
     font-size: 1rem;
   }
