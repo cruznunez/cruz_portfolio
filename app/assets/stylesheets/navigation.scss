@@ -39,8 +39,10 @@ nav {
 .update-button {
   background: $green !important;
   border: 2px solid $green !important;
-  &:hover {
-    color: $green !important;
+  @include immobile {
+    &:hover {
+      color: $green !important;
+    }
   }
 }
 .red-button {
@@ -59,9 +61,6 @@ nav {
   }
 }
 .button, .big-button {
-  @include immobile {
-    display: inline-block;
-  }
   position: relative;
   text-align: center;
   margin-bottom: 8px;
@@ -77,6 +76,7 @@ nav {
   text-decoration: none;
   transition: all 0.3s;
   @include immobile {
+    display: inline-block;
     border: 2px solid $site-color;
     &:hover {
       background-color: white !important;
@@ -125,6 +125,7 @@ nav {
     font-size: 12.8px;
   }
   .button, .big-button {
+    display: block;
     i {
       display: block;
       line-height: .8;

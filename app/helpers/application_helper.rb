@@ -1,6 +1,7 @@
 module ApplicationHelper
   def back
-    link_to '<span class="big-button submit">Back<span>'.html_safe, :back
+    link = click_area(:back)
+    "<span class='big-button submit'>#{link}Back</span>".html_safe
   end
 
   def click_area(path)
