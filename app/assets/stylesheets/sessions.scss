@@ -1,5 +1,6 @@
 @import 'sass';
 .tumblr-input {
+  @include appearance(none);
   border: none;
   border-radius: 2px;
   border-bottom: 2px solid #ccc;
