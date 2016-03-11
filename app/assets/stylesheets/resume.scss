@@ -1,3 +1,4 @@
+@import "sass";
 div.resume-container {
   left: 0;
   right: 0;
@@ -12,7 +13,12 @@ div.icon {
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  font-size: 300px;
+  @include mobile {
+    font-size: 200px;
+  }
+  @include immobile {
+    font-size: 300px;
+  }
   opacity: 0.0039216;
   transition: opacity 0.15s;
 }
