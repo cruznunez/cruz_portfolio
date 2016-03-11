@@ -91,7 +91,7 @@ module ApplicationHelper
             color: #{color};
           }
         }
-        @media only screen and (min-width: 1px) and (max-width: 672px) {
+        @media only screen and (min-width: 1px) and (max-width: 768px) {
           .selected {
             color: #{color};
           }
