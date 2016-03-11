@@ -3,6 +3,10 @@ module ApplicationHelper
     link_to '<span class="big-button submit">Back<span>'.html_safe, :back
   end
 
+  def click_area(path)
+    link_to '<span class="click-area"></span>'.html_safe, path
+  end
+
   def description(string = nil)
     set_meta_tags description: string if string
     prepare_meta_tags
@@ -29,10 +33,33 @@ module ApplicationHelper
   end
 
   def navigation(page)
-    href = {'Home' => '/', 'Projects' => '/projects', 'Resumé' => '/resume', 'Colors' => '/colors'}[page]
+    href, icon = hrefs(page), icons(page)
+    click_area = click_area(href)
     css_class = @page == page ? 'button selected' : 'button'
-    icon_class = {'Home' => 'fa fa-home', 'Projects' => 'fa fa-file-code-o', 'Resumé' => 'fa fa-check-square-o' }[page]
-    "<a href='#{href}'><span class='#{css_class}'><i class='#{icon_class}'></i>#{page}</span></a>".html_safe
+    extra = page == 'Colors' ? 'style="line-height:15px"' : nil
+    "<span class='#{css_class}' #{extra}>#{click_area}#{icon}#{page}</span>".html_safe
+  end
+
+  def icons page
+    if page == 'Colors'
+      "<img class='mobile-only' style='height:17px;' src='#{asset_url('colors.png')}'><br class='mobile-only'>"
+    else
+      icon_class = {
+        'Home' => 'fa fa-home',
+        'Projects' => 'fa fa-file-code-o',
+        'Resumé' => 'fa fa-check-square-o'
+      }[page]
+      "<i class='#{icon_class}'></i>"
+    end
+  end
+
+  def hrefs page
+    {
+      'Home' => '/',
+      'Projects' => '/projects',
+      'Resumé' => '/resume',
+      'Colors' => '/colors'
+    }[page]
   end
 
   def site_color(color = nil)

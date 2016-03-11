@@ -74,6 +74,13 @@ function rmTechFromProject() {
   });
 };
 
+function changeSiteColor() {
+  $('.color').click( function() {
+    var code = $(this).html();
+    $('#color').val(code).change()
+  });
+}
+
 $(placeInitialBlackContactInfo);
 $(masterLock);
 $(showChosenProjectPic);

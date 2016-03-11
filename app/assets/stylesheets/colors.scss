@@ -1,0 +1,35 @@
+@import "sass";
+.color {
+  $height: 46px;
+  border: 2px solid;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  height: $height;
+  line-height: $height;
+  margin-bottom: 8px;
+  text-align: center;
+  transition: all .3s;
+  &:hover {
+    background-color: white !important;
+  }
+  @include mobile {
+    width: 48%;
+    &:nth-child(2n) {
+      margin-left: 4%;
+    }
+  }
+  @include immobile {
+    width: 31%;
+    margin-left: 3.5%;
+    &:nth-child(3n-2) {
+      margin-left: 0;
+    }
+  }
+}
+.pre {
+  // white-space: pre-wrap;
+  font-size: 0;
+}

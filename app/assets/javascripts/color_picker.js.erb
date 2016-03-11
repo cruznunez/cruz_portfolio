@@ -1,7 +1,8 @@
 function colorPicker() {
-  $('#color').minicolors()
+  $('#color').minicolors();
+  changeSiteColor();
   $("#color").change(function () {
-    color = this.value
+    var color = this.value;
     $.ajax({
       url: "/site_color",
       type: "GET",
