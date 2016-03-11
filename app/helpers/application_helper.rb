@@ -81,7 +81,7 @@ module ApplicationHelper
         .tumblr-input:focus {
           border-color: #{color};
         }
-        @media (min-width: 673px) {
+        @media (min-width: 769px) {
           .button,
           .big-button {
             background: #{color};
