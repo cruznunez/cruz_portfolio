@@ -1,4 +1,9 @@
 @import "sass";
+.color-button {
+  @include mobile {
+    line-height: 15px;
+  }
+}
 .color {
   $height: 46px;
   border: 2px solid;

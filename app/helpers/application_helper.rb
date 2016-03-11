@@ -36,8 +36,8 @@ module ApplicationHelper
     href, icon = hrefs(page), icons(page)
     click_area = click_area(href)
     css_class = @page == page ? 'button selected' : 'button'
-    extra = page == 'Colors' ? 'style="line-height:15px"' : nil
-    "<span class='#{css_class}' #{extra}>#{click_area}#{icon}#{page}</span>".html_safe
+    extra = page == 'Colors' ? 'color-button' : nil
+    "<span class='#{css_class} #{extra}'>#{click_area}#{icon}#{page}</span>".html_safe
   end
 
   def icons page
