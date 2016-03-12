@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
       if session[:user_id]        # If so, check if user is signed in
         redirect_to root_path       # if so they are signed in, go to home page, already logged in
       else
+        @page = 'Log In'
         @user = User.new            # if not, go to login page so they sign in
       end
     else
