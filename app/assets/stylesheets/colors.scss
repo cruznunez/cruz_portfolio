@@ -14,7 +14,7 @@
   font-size: 15px;
   font-weight: bold;
   height: $height;
-  line-height: $height;
+  line-height: $height - 1;
   margin-bottom: 8px;
   text-align: center;
   transition: all .3s;
@@ -38,4 +38,10 @@
 .pre {
   // white-space: pre-wrap;
   font-size: 0;
+  // -webkit-filter: grayscale(100%);
+  // filter: grayscale(100%);
+  // background: black;
+}
+body {
+  // background: black;
 }
