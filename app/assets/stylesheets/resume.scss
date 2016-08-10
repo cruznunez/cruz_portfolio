@@ -1,30 +1,5 @@
 @import "sass";
-div.resume-container {
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 100%;
-  position: relative;
-  padding-top: 1em;
-}
-div.icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  @include mobile {
-    font-size: 200px;
-  }
-  @include immobile {
-    font-size: 300px;
-  }
-  opacity: 0.0039216;
-  transition: opacity 0.15s;
-}
-img#resume {
+.resume {
+  margin-bottom: 1em;
   box-shadow: 0 0 2.5px 0 rgba(0, 0, 0, .5);
-}
-div.resume-container:hover div.icon{
-  opacity: 0.6;
 }

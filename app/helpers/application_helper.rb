@@ -65,7 +65,7 @@ module ApplicationHelper
 
   def site_color(color = nil)
     color ||= Site.first.color rescue 'blue'
-    %Q(
+    <<-HTML.html_safe
       <style>
         .page-header {
           background: #{color};
@@ -98,7 +98,7 @@ module ApplicationHelper
           }
         }
       </style>
-    ).html_safe
+    HTML
   end
 
   def title(title = nil, output = nil)
