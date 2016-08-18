@@ -1,4 +1,7 @@
 @import "sass";
+body {
+  // -webkit-filter: grayscale(100%);
+}
 .color-button {
   @include mobile {
     line-height: 15px;
