@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class V2::PagesController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: :update_color
   before_action :authenticate_user, only: [:colors, :update_color, :site_color]
 

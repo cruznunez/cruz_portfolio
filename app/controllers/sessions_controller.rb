@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     if user
       if user.authenticate(password)
         session[:user_id] = user.id
-        redirect_to projects_path
+        redirect_to root_path
       else
         redirect_to log_in_path
       end
@@ -30,6 +30,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to projects_path
+    redirect_to root_path
   end
 end

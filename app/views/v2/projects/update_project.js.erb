@@ -1,0 +1,5 @@
+$(".project[id=<%= @project.id %>] .technologies").html("<%= j( render partial: 'projects/technologies', locals: { project: @project } ) %>");
+$('.project[id=<%= @project.id %>] .rm-tech-field').html("<%= j( render partial: 'projects/rm_tech', locals: { project: @project } ) %>");
+$('.project[id=<%= @project.id %>] .add-tech-field').html("<%= j( render partial: 'projects/add_tech', locals: { project: @project } ) %>");
+addTechToProject();
+rmTechFromProject();

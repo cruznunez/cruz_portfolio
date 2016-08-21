@@ -1,0 +1,26 @@
+@import 'sass';
+.tumblr-input {
+  @include appearance(none);
+  border: none;
+  border-radius: 2px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 8px;
+  transition: all .25s;
+  &:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 20px white inset;
+    -webkit-text-fill-color: #333;
+  }
+  &:hover {
+    border-color: transparentize($site-color, 0.3);
+    border-color: lightgray;
+    border-color: #606c71;
+    border-color: #999;
+  }
+  &:focus {
+    border-color: $site-color;
+    outline: 0;
+  }
+}
+.password-field {
+  -webkit-text-security: disc;
+}

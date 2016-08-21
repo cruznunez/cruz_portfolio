@@ -4,7 +4,7 @@ function colorPicker() {
   $("#color").change(function () {
     var color = this.value;
     $.ajax({
-      url: "/site_color",
+      url: "site_color",
       type: "GET",
       data: {
         'color' : color

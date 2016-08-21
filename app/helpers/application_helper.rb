@@ -56,10 +56,10 @@ module ApplicationHelper
 
   def hrefs page
     {
-      'Home' => '/',
-      'Projects' => '/projects',
-      'Resumé' => '/resume',
-      'Colors' => '/colors'
+      'Home' => "/#{v}",
+      'Projects' => "/#{v}/projects",
+      'Resumé' => "/#{v}/resume",
+      'Colors' => "/#{v}/colors"
     }[page]
   end
 
@@ -67,6 +67,12 @@ module ApplicationHelper
     color ||= Site.first.color rescue 'blue'
     <<-HTML.html_safe
       <style>
+        #version {
+          color: #{color};
+        }
+        #version:hover {
+          background: #{color};
+        }
         .page-header {
           background: #{color};
         }
