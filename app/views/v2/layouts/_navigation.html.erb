@@ -1,10 +1,14 @@
-<div id="nav">
-  <nav>
-    <%= navigation 'Home' %>
-    <%= navigation 'Projects' %>
-    <%= navigation 'Resumé' %>
-    <% if logged_in? %>
-      <%= navigation 'Colors' %>
-    <% end %>
-  </nav>
+<!-- <span class="nav-toggle" onclick="navToggle();">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</span> -->
+
+<div class="transform-icon x-fancy-3">
+  <i></i>
 </div>
+
+<nav class="sidebar" role="navigation">
+  <%= nav_2 'Home' %>
+  <%= nav_2 'Projects' %>
+  <%= nav_2 'Resumé' %>
+  <%= link_to 'V1', '/v1' %>
+</nav>

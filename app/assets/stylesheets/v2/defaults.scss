@@ -1,4 +1,23 @@
 @import 'sass';
+#version {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  outline: 0;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  text-align: center;
+  transition: all 0.3s;
+  width: 60px;
+  z-index: 1;
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
 #add-project,
 .green {
   color: $green;
@@ -18,11 +37,12 @@
   margin-top: 0 !important;
 }
 .main-content {
+  background: white;
   h1,  h2,  h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: $site-color;
+    // color: $site-color;
   }
   img {
     max-width: 100%;
@@ -141,30 +161,34 @@
   background-color: #eff0f1;
   border: 0;
 }
-@include desktop {
-  .main-content {
-    max-width: 70%;
-    padding: 2rem 6rem;
-    margin: 0 auto;
-    font-size: 1.1rem;
-  }
+.main-content {
+  width: 100%;
+  // padding: 2em 6em;
 }
-@include tablet {
-  .main-content {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
-    max-width: 70%;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-}
-@include mobile {
-  .main-content {
-    padding: 2rem 1rem 0;
-    font-size: 1rem;
-  }
-}
+// @include desktop {
+//   .main-content {
+//     max-width: 70%;
+//     padding: 2rem 6rem;
+//     margin: 0 auto;
+//     font-size: 1.1rem;
+//   }
+// }
+// @include tablet {
+//   .main-content {
+//     padding: 2rem 4rem;
+//     font-size: 1.1rem;
+//     max-width: 70%;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+//   }
+// }
+// @include mobile {
+//   .main-content {
+//     padding: 2rem 1rem 0;
+//     font-size: 1rem;
+//   }
+// }
 * {
   box-sizing: border-box;
 }
@@ -177,9 +201,7 @@ a:hover {
 }
 body {
   padding: 0;
-  padding-bottom: 4em;
   margin: 0;
-  // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   // Experiment 1
   // font-family: 'Oswald', sans-serif;
@@ -192,4 +214,14 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #606c71;
+  height: 100%;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+html {
+  height: 100vh;
+  min-height: 100%;
+  // overflow: hidden;
 }

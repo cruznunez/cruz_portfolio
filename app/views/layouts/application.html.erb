@@ -10,10 +10,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= site_color if v == 'v1' %>
-    <%= render "#{v}/layouts/header" %>
-    <%= render "#{v}/layouts/navigation" %>
-    <%= render 'layouts/version'  %>
+    <%= render "#{v}/layouts/main" %>
     <section class="main-content">
       <%= yield %>
     </section>

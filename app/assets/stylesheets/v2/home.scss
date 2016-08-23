@@ -1,31 +1,60 @@
 @import 'sass';
-img#self {
-  display: block;
-  width: 75%;
-  margin: auto;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  @include tablet {
-    width: 100%;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border-radius: 5px;
-  }
+
+.scroll {
+  // if mobile then enable
   @include mobile {
-    width: 100%;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    border-radius: 5px;
+    overflow-y: scroll;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  // momentum scrolling. usually improves experience, but here, leave disabled
+  // -webkit-overflow-scrolling: touch;
+}
+html {
+  @extend .scroll;
+}
+body {
+  @extend .scroll;
+  height: 100vh;
+}
+// .container {
+//   @extend .scroll;
+//   height: 100vh;
+// }
+.slide {
+  background: center/cover fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+// Somewhat important stuff
+
+.slide {
+  color: white;
+  font: 3vw "Exo", sans-serif;
+  text-shadow: 1px 1px black;
+
+  // text center
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 8vw;
+    font-size: 8vmax;
+    margin: 0 0 .68em 0;
+  }
+  footer {
+    font-style: italic;
+    text-shadow: 1px 1px black;
+    font-size: 3vw;
+    font-size: 3vmax;
   }
 }
-code a {
-  font-size: 110%;
-  color: #0645AD;
+#slide1 {
+  background-image: url('http://all4desktop.com/data_images/original/4238689-nature-background.jpg');
 }
-code a:hover {
-  color: #0B0080;
-  text-decoration: none;
+#slide2 {
+  background-image: url('http://marshall.org/wp-content/themes/marshall/img/featured-space-policy.jpg')
 }

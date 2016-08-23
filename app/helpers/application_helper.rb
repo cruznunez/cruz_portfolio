@@ -41,6 +41,11 @@ module ApplicationHelper
     "<span class='#{css_class} #{extra}'>#{click_area}#{icon}#{page}</span>".html_safe
   end
 
+  def nav_2(page)
+    href = hrefs(page)
+    link_to page, href
+  end
+
   def icons page
     if page == 'Colors'
       "<img class='mobile-only' style='height:17px;' src='#{asset_url('colors.png')}'><br class='mobile-only'>"
