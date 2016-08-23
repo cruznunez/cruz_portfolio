@@ -1,53 +1,62 @@
 @import 'sass';
-$background-color: #7F7F7F;
-
-.sidebar {
-  background-color: white;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.3em;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  // z-index: 1001;
-  transform: translateX(-100%);
-  &.active {
-    transform: translateX(0);
-  }
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    color: inherit;
-    &:hover {
-      background-color: darken($background-color, 5%);;
-    }
-  }
-}
-
 $time: 0.4s;
 $time-2: $time cubic-bezier(.77,0,.175,1);
-$background-color: transparent;
-$color: white;
-$active-color: black;
+$btn-bg-color: transparent;
+$btn-color: white;
+$btn-active-color: black;
 $btn-width: 50px;
 $btn-height: round($btn-width*0.8);
 $bar-width: round($btn-width*0.625);
 $bar-height: round($bar-width*0.07);
 
+.sidebar {
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+  height: 100vh;
+  position: fixed;
+
+  // Transition stuff
+  opacity: 0;
+  transition: all $time-2;
+  width: 100vw;
+  z-index: -1;
+  &.active {
+    opacity: 1;
+    z-index: 999;
+  }
+  // End transition stuff
+  a {
+    $btn-bg-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: inherit;
+    transition: all $time;
+    &:hover {
+      background-color: darken($btn-bg-color, 5%);;
+    }
+  }
+}
+
+// Transform Icon
+
 .transform-icon {
-  background: $background-color;
+  background: $btn-bg-color;
+  cursor: pointer;
   height: $btn-height;
   width: $btn-width;
-  position: absolute;
-  z-index: 1;
+  position: fixed !important;
+  z-index: 1000;
+  top: 0;
   right: 0;
   margin: 1em;
 }
 .base {
-  background: $color;
+  background: $btn-color;
   height: $bar-height;
   width: $bar-width;
   position: absolute;
@@ -56,12 +65,12 @@ $bar-height: round($bar-width*0.07);
   transition: all $time;
   &::before,
   &::after {
-    background: $color;
-    height: $bar-height;
-    width: 100%;
-    position: absolute;
+    background: $btn-color;
     content: '';
+    height: $bar-height;
+    position: absolute;
     transition: all $time;
+    width: $bar-width;
   }
   &::before {
     top: -$bar-width*.29;
@@ -79,20 +88,20 @@ $bar-height: round($bar-width*0.07);
   }
   &.active {
     height: 0;
-    background: $active-color;
+    background: $btn-active-color;
     &::before, &::after {
-      background: $active-color;
-      top: 0px;
+      background: $btn-active-color;
+      top: 0;
     }
   }
 }
-.x-fancy-3 {
+.x-fancy-3-reverse {
   &:hover {
     i::before {
-      right: -$bar-width*.176;
+      right: $bar-width*.176;
     }
     i::after {
-      right: $bar-width*.176;
+      right: -$bar-width*.176;
     }
     .active::before,
     .active::after {
@@ -100,14 +109,14 @@ $bar-height: round($bar-width*0.07);
     }
   }
 }
-.x-fancy-3 {
+.x-fancy-3-reverse {
   i {
     @extend .x-fancy-base;
     &.active {
       // height: $bar-height;
-      transform: rotate(135deg);
+      transform: rotate(-135deg);
       &::before {
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
       }
       &::after {
         transform: rotate(0deg);
