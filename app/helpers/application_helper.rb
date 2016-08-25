@@ -72,6 +72,7 @@ module ApplicationHelper
     color ||= Site.first.color rescue 'blue'
     <<-HTML.html_safe
       <style>
+        .v,
         #version {
           color: #{color};
         }
