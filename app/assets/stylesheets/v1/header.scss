@@ -1,4 +1,35 @@
 @import 'sass';
+.contact-info-container {
+  color: white;
+  position: absolute;
+  @include transform(translateY(-100%));
+  width: 100%;
+  z-index: 9999;
+}
+.contact-info-half {
+  display: flex;
+  justify-content: space-around;
+  @include immobile {
+    width: 50%;
+  }
+}
+.contact-info {
+  display: table-cell;
+  margin: 10px;
+  width: auto;
+  @include mobile {
+    line-height: 55px;
+    margin: 0 !important;
+    i {
+      font-size: 1.2em;
+      margin: 10px;
+      &:hover {
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
 @include mobile {
   .text {
     display: none;
@@ -8,27 +39,6 @@
   }
   .project-tagline {
     display: none;
-  }
-
-  .contact-info {
-    line-height: 55px;
-    margin: 0 !important;
-    &:first-child,
-    &:nth-child(2n) {
-      float: left;
-    }
-    &:nth-child(3n),
-    &:last-child {
-      float: right;
-    }
-    i {
-      font-size: 1.2em;
-
-      margin: 10px;
-      &:hover {
-        border-bottom: none !important;
-      }
-    }
   }
   .page-header {
     line-height: 55px;
@@ -48,30 +58,12 @@
     border-bottom: 1.5px solid #fff;
   }
 }
-.container-white {
-  position: absolute;
-  background: transparent;
-  padding: 10px 0;
-  color: white;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
-  z-index: 9999;
-}
 .container {
   display: table;
   width: 100%;
   left:0;
   right:0;
   margin:auto;
-}
-.contact-info {
-  display: table-cell;
-  text-align: center;
-  margin: 10px;
-  width: auto;
 }
 .project-name {
   margin: 0;

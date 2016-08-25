@@ -1,0 +1,96 @@
+// Version 1
+// $blade-width: 5px;
+// $c: #fff;
+// $num: 3;
+// $perspective: 800px;
+// $space: 3em;
+// $width: 200px;
+
+// Version 2
+// $blade-width: 5px;
+// $c: #fff;
+// $num: 6;
+// $perspective: 800px;
+// $space: 3em;
+// $width: 200px;
+
+// Version 3
+// $blade-width: 5px;
+// $c: #fff;
+// $num: 3;
+// $perspective: 150px;
+// $space: 3em;
+// $width: 200px;
+
+// Version 4
+// $blade-width: 2px;
+// $c: #fff;
+// $num: 3;
+// $perspective: 50px;
+// $space: 3em;
+// $width: 50px;
+
+// Version 5
+// $blade-width: 1px;
+// $c: #fff;
+// $num: 3;
+// $perspective: 40px;
+// $space: 3em;
+// $width: 50px;
+
+// Version 6
+$blade-width: 1px;
+$c: #fff;
+$num: 6;
+$perspective: 150px;
+$space: 1em;
+$width: 40px;
+
+// Version 6
+// $blade-width: 3px;
+// $c: #fff;
+// $num: 3;
+// $perspective: 800px;
+// $space: 1em;
+// $width: 40px;
+
+.wtf {
+  top: $space;
+  left: $space;
+}
+// .wtf {
+//   top: 0; right: 0; bottom: 0; left: 0;
+//   margin: auto;
+// }
+
+.wtf {
+  width: $width;
+  height: $width;
+  position: fixed;
+  perspective: $perspective;
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-left: $blade-width $c solid;
+    border-top: $blade-width*2 transparent solid;
+    border-right: $blade-width $c solid;
+    @for $i from 1 through $num {
+      &:nth-of-type(#{$i}) {
+        animation: ani-#{$i} 1s linear infinite;
+      }
+    }
+  }
+}
+
+@for $i from 1 through $num {
+  @keyframes ani-#{$i} {
+    from {
+      transform: rotateZ(360deg/$num*$i) rotateX(70deg) rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg/$num*$i) rotateX(70deg) rotateZ(360deg);
+    }
+  }
+}
