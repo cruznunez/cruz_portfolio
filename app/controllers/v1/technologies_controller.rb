@@ -1,4 +1,4 @@
-class TechnologiesController < ApplicationController
+class V1::TechnologiesController < ApplicationController
   before_action :set_technology, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user
 
@@ -21,7 +21,7 @@ class TechnologiesController < ApplicationController
     @technology = Technology.new(technology_params)
 
     if @technology.save
-      redirect_to technologies_path
+      redirect_to v1_technologies_path
     else
       render :new
     end
@@ -30,7 +30,7 @@ class TechnologiesController < ApplicationController
   # PATCH/PUT /technologies/1
   def update
     if @technology.update(technology_params)
-      redirect_to technologies_path
+      redirect_to v1_technologies_path
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class TechnologiesController < ApplicationController
   # DELETE /technologies/1
   def destroy
     @technology.destroy
-    redirect_to technologies_url
+    redirect_to v1_technologies_paths
   end
 
   private

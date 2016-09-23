@@ -1,6 +1,6 @@
 <div class="flex-container">
   <h1 class="topless">Technologies</h1>
-  <%= link_to 'New Technology', new_technology_path, class: "blue-link flex-right" %>
+  <%= link_to 'New Technology', new_v1_technology_path, class: "blue-link flex-right" %>
 </div>
 
 <table>
@@ -17,8 +17,8 @@
       <tr>
         <td><%= technology.name %></td>
         <td><%= technology.long_name %></td>
-        <td><%= link_to 'Edit', edit_technology_path(technology) %></td>
-        <td><%= link_to 'Destroy', technology, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_v1_technology_path(technology) %></td>
+        <td><%= link_to 'Destroy', [:v1, technology], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

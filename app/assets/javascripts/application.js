@@ -57,7 +57,7 @@ function addTechToProject() {
     var project_id = $(this).closest(".project").attr("id");
     var tech_id = $("select#add option:selected")[0].value;
     $.ajax({
-      url: "/projects/" + project_id + "/add_tech/" + tech_id,
+      url: "/v1/projects/" + project_id + "/add_tech/" + tech_id,
       type: "PATCH",
     });
   });
@@ -68,7 +68,7 @@ function rmTechFromProject() {
     var project_id = $(this).closest(".project").attr("id");
     var tech_id = $("select#rm option:selected")[0].value;
     $.ajax({
-      url: "/projects/" + project_id + "/rm_tech/" + tech_id,
+      url: "/v1/projects/" + project_id + "/rm_tech/" + tech_id,
       type: "DELETE",
     });
   });

@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <h2>Log In</h2>
   <div id="loginForm">
-    <%= form_tag("/log_in", method: "post", autocomplete: :off) do |f| %>
+    <%= form_tag("log_in", method: "post", autocomplete: :off) do |f| %>
       <div>
         <%= text_field_tag :name, nil, class: "tumblr-input", autofocus: true, autocomplete: :off, placeholder: "name" %>
       </div>

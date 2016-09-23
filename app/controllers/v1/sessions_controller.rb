@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class V1::SessionsController < ApplicationController
   def new
     if User.any?                # Are there any users?
       if session[:user_id]        # If so, check if user is signed in

@@ -14,6 +14,16 @@ Rails.application.routes.draw do
     post 'colors' => 'pages#update_color'
     get 'site_color' => 'pages#site_color'
     resources :projects, except: :show
+
+    # login stuff
+    get 'log_in' => 'sessions#new'
+    post 'log_in' => 'sessions#create'
+    get 'log_out' => 'sessions#destroy'
+    patch 'projects/:id/add_tech/:tech_id' => "projects#add_tech"
+    delete 'projects/:id/rm_tech/:tech_id' => "projects#rm_tech"
+
+    # technology stuff
+    resources :technologies, except: :show
   end
 
   namespace :v2 do
@@ -22,13 +32,7 @@ Rails.application.routes.draw do
   end
 
 
-  get 'log_in' => 'sessions#new'
-  post 'log_in' => 'sessions#create'
-  get 'log_out' => 'sessions#destroy'
 
-  patch 'projects/:id/add_tech/:tech_id' => "projects#add_tech"
-  delete 'projects/:id/rm_tech/:tech_id' => "projects#rm_tech"
 
   resources :users, except: :show
-  resources :technologies, except: :show
 end

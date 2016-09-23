@@ -39,20 +39,20 @@
 // $width: 50px;
 
 // Version 6
-$blade-width: 1px;
-$c: #fff;
-$num: 6;
-$perspective: 150px;
-$space: 1em;
-$width: 40px;
-
-// Version 6
-// $blade-width: 3px;
+// $blade-width: 1px;
 // $c: #fff;
-// $num: 3;
-// $perspective: 800px;
+// $num: 6;
+// $perspective: 150px;
 // $space: 1em;
 // $width: 40px;
+
+// Version 6
+$blade-width: 3px;
+$c: #fff;
+$num: 3;
+$perspective: 800px;
+$space: 1em;
+$width: 40px;
 
 .wtf {
   top: $space;
@@ -68,6 +68,7 @@ $width: 40px;
   height: $width;
   position: fixed;
   perspective: $perspective;
+  z-index: 999;
   span {
     position: absolute;
     width: 100%;
@@ -76,14 +77,24 @@ $width: 40px;
     border-left: $blade-width $c solid;
     border-top: $blade-width*2 transparent solid;
     border-right: $blade-width $c solid;
+    transition: border-color 0.4s;
     @for $i from 1 through $num {
       &:nth-of-type(#{$i}) {
         animation: ani-#{$i} 1s linear infinite;
       }
     }
   }
+  &.active {
+    background: white;
+    &:hover {
+      background: darken(white, 5%)
+    }
+    span {
+      border-left: $blade-width black solid;
+      border-right: $blade-width black solid;
+    }
+  }
 }
-
 @for $i from 1 through $num {
   @keyframes ani-#{$i} {
     from {

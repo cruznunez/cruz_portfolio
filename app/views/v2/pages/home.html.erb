@@ -46,4 +46,18 @@
     </footer>
   </div>
 
+  <% @projects.each do |project| %>
+    <div class="container">
+      <div class="slide" style="background-image: url(<%= project.image.link %>)">
+        <h1>
+          <%= project.name %>
+        </h1>
+      </div>
+    </div>
+
+    <p>
+      <%= project.description %>
+    </p>
+  <% end %>
+
 </div>

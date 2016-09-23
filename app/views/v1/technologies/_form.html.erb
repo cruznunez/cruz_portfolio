@@ -1,4 +1,4 @@
-<%= form_for(@technology) do |f| %>
+<%= form_for [:v1, @technology] do |f| %>
   <% if @technology.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@technology.errors.count, "error") %> prohibited this technology from being saved:</h2>

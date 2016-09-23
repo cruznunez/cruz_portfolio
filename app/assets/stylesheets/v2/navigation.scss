@@ -29,7 +29,6 @@ $bar-height: round($bar-width*0.07);
   }
   // End transition stuff
   a {
-    $btn-bg-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +36,7 @@ $bar-height: round($bar-width*0.07);
     color: inherit;
     transition: all $time;
     &:hover {
-      background-color: darken($btn-bg-color, 5%);;
+      background: darken(white, 5%);
     }
   }
 }
@@ -51,9 +50,14 @@ $bar-height: round($bar-width*0.07);
   width: $btn-width;
   position: fixed !important;
   z-index: 1000;
-  top: 0;
-  right: 0;
-  margin: 1em;
+  top: 1em;
+  right: 1em;
+  transition: background $time-2;
+  &.active {
+    &:hover {
+      background: darken(white, 5%);
+    }
+  }
 }
 .base {
   background: $btn-color;
@@ -86,14 +90,6 @@ $bar-height: round($bar-width*0.07);
     transition: all $time-2;
     right: 0;
   }
-  &.active {
-    height: 0;
-    background: $btn-active-color;
-    &::before, &::after {
-      background: $btn-active-color;
-      top: 0;
-    }
-  }
 }
 .x-fancy-3-reverse {
   &:hover {
@@ -103,18 +99,24 @@ $bar-height: round($bar-width*0.07);
     i::after {
       right: -$bar-width*.176;
     }
-    .active::before,
-    .active::after {
-      right: 0;
-    }
   }
 }
 .x-fancy-3-reverse {
   i {
     @extend .x-fancy-base;
-    &.active {
-      // height: $bar-height;
+  }
+  &.active {
+    // background: white;
+    i {
+      background: $btn-active-color;
+      height: $bar-height;
+      // height: 0;
       transform: rotate(-135deg);
+      &::before, &::after {
+        right: 0;
+        background: $btn-active-color;
+        top: 0;
+      }
       &::before {
         transform: rotate(-90deg);
       }
