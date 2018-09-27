@@ -64,6 +64,8 @@ $width: 40px;
 // }
 
 .wtf {
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2) inset;
   width: $width;
   height: $width;
   position: fixed;

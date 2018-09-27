@@ -1,23 +1,15 @@
 @import 'sass';
-img#self {
+
+#self {
   display: block;
   width: 75%;
   margin: auto;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   @include tablet {
     width: 100%;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     border-radius: 5px;
   }
   @include mobile {
     width: 100%;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     border-radius: 5px;
   }
 }
@@ -28,4 +20,8 @@ code a {
 code a:hover {
   color: #0B0080;
   text-decoration: none;
+}
+
+.mt {
+  margin-top: 1em;
 }

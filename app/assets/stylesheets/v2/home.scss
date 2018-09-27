@@ -33,7 +33,7 @@
 .slide {
   color: white;
   font: 3vw "Exo", sans-serif;
-  text-shadow: 1px 1px black;
+  text-shadow: 0 0 0.4em rgba(0,0,0,1);
 
   // text center
   display: flex;
@@ -42,15 +42,18 @@
   align-items: center;
   h1 {
     font-size: 8vw;
-    font-size: 8vmax;
+    // font-size: 8vmax;
     margin: 0 0 .68em 0;
+    text-shadow: 0 0 0.3em rgba(0,0,0,1);
   }
   footer {
     font-style: italic;
-    text-shadow: 1px 1px black;
     font-size: 3vw;
     font-size: 3vmax;
   }
+}
+.slide-divider {
+  padding: 0 1em;
 }
 #slide1 {
   background-image: url('http://all4desktop.com/data_images/original/4238689-nature-background.jpg');

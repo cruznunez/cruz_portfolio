@@ -6,6 +6,8 @@
   </div>
 <% end %>
 
+<%= page_entries_info @projects %>
+
 <% @projects.each do |project| %>
   <div class="project" id="<%= project.id %>">
     <div class="flex-container">
@@ -47,4 +49,6 @@
   </div>
 <% end %>
 
-<%= paginate @projects  %>
+<div class="flex-container justify-center mt">
+  <%= paginate @projects, window: 1, outer_window: 1  %>
+</div>

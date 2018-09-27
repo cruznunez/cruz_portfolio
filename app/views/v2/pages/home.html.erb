@@ -14,19 +14,30 @@
       Cruz Núñez
     </h1>
     <footer>
-      Software Enginner
+      Full-stack Developer
     </footer>
+    <div>
+      <%= link_to 'https://www.linkedin.com/in/cruznunez', class: 'link' do %>
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to 'https://github.com/cruznunez', class: 'link' do %>
+        <i class="fa fa-github-square" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to 'mailto:nunez.a.cruz@gmail.com', class: 'link' do %>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      <% end %>
+    </div>
   </div>
 
-  <h3>About</h3>
+  <div class="slide-divider">
+    <h3>About</h3>
 
-  <p>
-    I am a Ruby on Rails graduate from The Iron Yard in Durham, NC. I'm currently searching for a position in the Triangle Area to develop my skills as a programmer. I
-    <code><a href="https://github.com/cruznunez">commit</a></code>
-    to producing high-quality and meaningful work. If you want to team up and form amazing user experiences — you are very welcome to contact me.</code>
-  </p>
+    <p>
+      Hi I'm Cruz! I'm a full stack web developer. Feel free to look around.
+    </p>
+  </div>
 
-  <div id="slide1" class="slide">
+  <!-- <div id="slide1" class="slide">
     <h1>
       Project 1
     </h1>
@@ -44,7 +55,7 @@
     <footer>
       This project was lit 🔥
     </footer>
-  </div>
+  </div> -->
 
   <% @projects.each do |project| %>
     <div class="container">
@@ -55,9 +66,14 @@
       </div>
     </div>
 
-    <p>
-      <%= project.description %>
-    </p>
-  <% end %>
+    <div class="slide-divider">
+      <p>
+        <%= project.description.html_safe %>
+      </p>
 
+      <p>
+        <%= project.additional_information.html_safe %>
+      </p>
+    </div>
+  <% end %>
 </div>

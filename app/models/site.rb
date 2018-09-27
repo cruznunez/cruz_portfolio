@@ -41,8 +41,9 @@ class Site < ActiveRecord::Base
       p1: '#2A206B',
       i1: '#4B0082', # indigo
       p2: '#AA69FF',
-      p3: '#806BB3',
-      p4: '#9B59B6',
+      p3: '#8B43FF',
+      p4: '#806BB3',
+      p5: '#9B59B6',
 
       i2: '#DDAADD',
 
