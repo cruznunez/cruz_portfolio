@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     unless logged_in?
-      redirect_to projects_path
+      redirect_to root_path
     end
   end
 end

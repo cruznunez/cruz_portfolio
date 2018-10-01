@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
     # technology stuff
     resources :technologies, except: :show
+    resources :users, except: :show
   end
 
   namespace :v2 do
@@ -34,5 +35,4 @@ Rails.application.routes.draw do
 
 
 
-  resources :users, except: :show
 end

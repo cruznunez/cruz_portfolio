@@ -2,30 +2,31 @@
 //= require jquery.minicolors
 //= require jquery_ujs
 //= require_tree .
+
 function lockNav() {
   var headerHeight = $('.page-header').outerHeight( true );
   var windowHeight = $(window).height();
-  var contactInfoHeight = $('div.container-black').outerHeight( true );
-  var blackHeight = windowHeight + headerHeight - contactInfoHeight
   if ($(window).width() > 672) {
+    var contactInfoHeight = $('div.container-black').outerHeight( true );
+    var blackHeight = windowHeight + headerHeight - contactInfoHeight
     if($(window).scrollTop() > headerHeight ){
       if($('#nav').css('position') == 'absolute'){
         $('#nav').css({'position' : 'fixed', 'margin-top' : '0', 'top' : '5vh'});
         $('div.container-black').css({'position' : 'fixed', 'bottom' : '0', 'top' : ''});
       };
-    }else{
+    } else {
       if($('#nav').css('position') == 'fixed'){
         $('#nav').css({ 'position' : 'absolute', 'top' : '', 'margin-top' : ''});
         $('div.container-black').css({'position' : 'absolute', 'bottom': '', 'top' : blackHeight });
       };
     };
-  }else{
+  } else {
     $('#nav').css({ 'position' : '', 'top' : '', 'margin-top' : ''});
   }
 };
 
 function masterLock() {
-  $( window ).on("resize scroll",lockNav);
+  $(window).on("resize scroll", lockNav);
 };
 
 function placeInitialBlackContactInfo() {
@@ -74,16 +75,8 @@ function rmTechFromProject() {
   });
 };
 
-function changeSiteColor() {
-  $('.color').click( function() {
-    var code = $(this).html();
-    $('#color').val(code).change()
-  });
-};
-
 $(placeInitialBlackContactInfo);
 $(masterLock);
 $(showChosenProjectPic);
 $(addTechToProject);
 $(rmTechFromProject);
-$(keyBoardListener);
