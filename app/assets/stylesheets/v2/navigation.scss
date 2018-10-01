@@ -44,7 +44,7 @@ $bar-height: round($bar-width*0.07);
 // Transform Icon
 
 .transform-icon {
-  background: $btn-bg-color;
+  background: rgba(0,0,0,0.05);
   cursor: pointer;
   height: $btn-height;
   width: $btn-width;
@@ -54,6 +54,7 @@ $bar-height: round($bar-width*0.07);
   right: 1em;
   transition: background $time-2;
   &.active {
+    background: $btn-bg-color;
     &:hover {
       background: darken(white, 5%);
     }
