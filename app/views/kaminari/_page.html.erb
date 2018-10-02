@@ -1,6 +1,8 @@
 <% if page.current? %>
   <li class='active'>
-    <%= content_tag :a, page, data: { remote: remote }, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)) %>
+    <%= content_tag :a, data: { remote: remote }, rel: (page.next? ? 'next' : (page.prev? ? 'prev' : nil)) do %>
+      <span class="page-text"><%= page %></span>
+    <% end %>
   </li>
 <% else %>
   <li>
