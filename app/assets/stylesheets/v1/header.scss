@@ -5,6 +5,9 @@
   @include transform(translateY(-100%));
   width: 100%;
   z-index: 9999;
+  .contact-info {
+    margin: 10px;
+  }
 }
 .contact-info-half {
   display: flex;

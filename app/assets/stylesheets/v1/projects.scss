@@ -77,7 +77,7 @@ a.pop:hover {
 .project-title,
 .underline {
   &:hover {
-    border-bottom: 2.5px solid $site-color;
+    border-bottom: 2.5px solid currentColor;
   }
 }
 .flex-container {
