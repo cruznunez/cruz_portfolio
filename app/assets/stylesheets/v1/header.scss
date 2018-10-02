@@ -65,6 +65,10 @@
   right:0;
   margin:auto;
 }
+.project-name,
+.project-tagline {
+  color: white;
+}
 .project-name {
   margin: 0;
 }
@@ -106,9 +110,8 @@
   }
 }
 .page-header {
-  color: #fff;
+  background: currentColor;
   text-align: center;
-  background: $site-color;
   transition: all .3s;
 }
 @include desktop {

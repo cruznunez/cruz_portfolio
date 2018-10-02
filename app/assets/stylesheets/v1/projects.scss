@@ -16,6 +16,9 @@
   box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.75);
   opacity: .97;
 }
+.twins li, .triplets li {
+  color: $gray;
+}
 .twins {
   display: inline-block;
   width: 49%;
@@ -59,7 +62,7 @@
   }
 }
 a.pop{
-  color: inherit;
+  color: $gray;
   transition: font-size .3s, text-shadow .3s;
 }
 a.pop:hover {

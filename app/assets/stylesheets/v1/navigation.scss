@@ -69,8 +69,9 @@ nav {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   width: 100%;
-  background: $site-color;
-  color: #fff;
+  // background: $site-color;
+  background: currentColor;
+  // color: #fff;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 0;
@@ -78,10 +79,9 @@ nav {
   transition: all 0.3s;
   @include immobile {
     display: inline-block;
-    border: 2px solid $site-color;
+    border: 2px solid currentColor;
     &:hover {
       background-color: white !important;
-      color: $site-color;
     }
   }
   &:active {
@@ -92,12 +92,15 @@ nav {
     display: none;
   }
 }
-.selected {
-  @include mobile {
-    color: $site-color;
-  }
+.white {
+  color: white;
   @include immobile {
-    color: white;
+    &:hover {
+      color: currentColor;
+    }
+  }
+  @include mobile {
+    color: currentColor;
   }
 }
 @include mobile {
@@ -124,6 +127,9 @@ nav {
     background-color: white;
     padding: 0;
     font-size: 12.8px;
+    &.selected {
+      color: currentColor;
+    }
   }
   .button, .big-button {
     display: block;

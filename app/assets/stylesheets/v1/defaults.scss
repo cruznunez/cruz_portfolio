@@ -40,16 +40,17 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: normal;
-    color: $site-color;
+    color: currentColor;
   }
   img {
     max-width: 100%;
   }
-  p a {
-    color: $site-color;
-    &:hover {
-      color: $site-color;
-      border-bottom:1px solid $site-color;
+  p {
+    color: $gray;
+    a {
+      &:hover {
+        border-bottom:1px solid;
+      }
     }
   }
 }

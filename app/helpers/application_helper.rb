@@ -38,7 +38,13 @@ module ApplicationHelper
     click_area = click_area(href)
     css_class = @page == page ? 'button selected' : 'button'
     extra = page == 'Colors' ? 'color-button' : nil
-    "<span class='#{css_class} #{extra}'>#{click_area}#{icon}#{page}</span>".html_safe
+    <<-HTML.html_safe
+      <span class='#{css_class} #{extra}'>
+        <span class="white">
+          #{click_area}#{icon}#{page}
+        </span>
+      </span>
+    HTML
   end
 
   def nav_2(page)
@@ -108,6 +114,21 @@ module ApplicationHelper
           .selected {
             color: #{color};
           }
+        }
+      </style>
+    HTML
+  end
+
+  def site_color(color = nil)
+    color ||= Site.first.color rescue 'blue'
+
+    <<-HTML.html_safe
+      <style>
+        body {
+          color: #{color};
+        }
+        p a {
+          color: #{color};
         }
       </style>
     HTML
