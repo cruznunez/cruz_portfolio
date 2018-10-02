@@ -122,16 +122,7 @@ module ApplicationHelper
   def site_color(color = nil)
     color ||= Site.first.color rescue 'blue'
 
-    <<-HTML.html_safe
-      <style>
-        body {
-          color: #{color};
-        }
-        p a {
-          color: #{color};
-        }
-      </style>
-    HTML
+    render 'v1/pages/site_color', color: color
   end
 
   def title(title = nil, output = nil)

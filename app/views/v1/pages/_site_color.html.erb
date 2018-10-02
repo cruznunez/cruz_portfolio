@@ -1,26 +1,8 @@
 <style>
-  .page-header {
-    background: <%= @color %>;
+  body {
+    color: <%= color %>;
   }
-  .main-content p a, .main-content h3, .main-content p a:hover {
-    color: <%= @color %>;
-  }
-  .main-content p a:hover {
-    border-color: <%= @color %>;
-  }
-  @media (min-width: 769px) {
-    .button,
-    .big-button {
-      background: <%= @color %>;
-      border-color: <%= @color %>;
-    }
-    .button:hover, .big-button:hover {
-      color: <%= @color %>;
-    }
-  }
-  @media only screen and (min-width: 1px) and (max-width: 672px) {
-    .selected {
-      color: <%= @color %>;
-    }
+  p a {
+    color: <%= color %>;
   }
 </style>

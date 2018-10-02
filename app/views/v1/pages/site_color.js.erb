@@ -1,4 +1,4 @@
-styles = $('style')
-old_style = $(styles[styles.length - 1])
-new_style = "<%= j(render 'v1/pages/site_color', color: @color) %>"
+var styles = $('style')
+var old_style = $(styles[styles.length - 1])
+var new_style = "<%= j(render 'v1/pages/site_color', color: @color) %>"
 old_style.replaceWith(new_style)
