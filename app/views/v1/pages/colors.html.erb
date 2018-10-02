@@ -3,7 +3,7 @@
 <form method="post" action="colors">
   <%= text_field_tag :color, @color %>
   <div class="actions">
-    <%= submit_tag 'Save color', class: 'big-button update-button' %>
+    <%= submit_tag 'Save color', class: 'big-button update-button', style: 'color: white;' %>
   </div>
 </form>
 
@@ -17,6 +17,5 @@
     ><%= code %></div>
   <% end %>
 </div>
-<script>
-  colorPicker()
-</script>
+
+<script>colorPicker();</script>

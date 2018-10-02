@@ -1,12 +1,13 @@
 <% if logged_in? %>
   <div class="flex-container">
+    <p><%= page_entries_info @projects %></p>
+
     <%= link_to new_v1_project_path, id: 'add-project', class: 'flex-right' do %>
       <i class="fa fa-plus"></i> Add Project
     <% end %>
   </div>
 <% end %>
 
-<%= page_entries_info @projects %>
 
 <% @projects.each do |project| %>
   <div class="project" id="<%= project.id %>">
