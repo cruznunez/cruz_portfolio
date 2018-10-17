@@ -21,10 +21,10 @@ class V1::SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to root_path
       else
-        redirect_to log_in_path
+        redirect_to v1_log_in_path
       end
     else
-      redirect_to log_in_path
+      redirect_to v1_log_in_path
     end
   end
 

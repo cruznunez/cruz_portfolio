@@ -2,18 +2,20 @@
   <h2>Log In</h2>
   <div id="loginForm">
     <%= form_tag("log_in", method: "post", autocomplete: :off) do |f| %>
-      <div>
+      <div class="border-color">
         <%= text_field_tag :name, nil, class: "tumblr-input", autofocus: true, autocomplete: :off, placeholder: "name" %>
       </div>
-      <div>
+      <div class="border-color">
         <%= search_field_tag :password, nil, class: "password-field tumblr-input", autocomplete: :off, placeholder: "password" %>
       </div>
       <div class="actions">
-        <%= submit_tag "Log In", class: "big-button" %>
+        <span class="background-color border-color">
+          <%= submit_tag 'Log In', class: 'big-button', style: 'color: white;' %>
+        </span>
       </div>
     <% end %>
   </div>
   <% if User.count == 0 %>
-    <%= link_to "Create an Account", new_user_path, class: "submit big-button red-button" %>
+    <%= link_to 'Create an Account', new_user_path, class: 'submit big-button red-button' %>
   <% end %>
 </div>

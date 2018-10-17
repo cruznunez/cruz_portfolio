@@ -11,13 +11,10 @@
     -webkit-text-fill-color: #333;
   }
   &:hover {
-    border-color: transparentize($site-color, 0.3);
-    border-color: lightgray;
-    border-color: #606c71;
     border-color: #999;
   }
   &:focus {
-    border-color: $site-color;
+    border-color: inherit;
     outline: 0;
   }
 }

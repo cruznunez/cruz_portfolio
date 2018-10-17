@@ -1,11 +1,11 @@
 class V2::ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user, except: :index
+  before_action :authenticate_user, except: [:index, :show]
 
   # GET /projects
   def index
-    @page = "Projects"
-    @projects = Project.all.order(order: :desc).page(params[:page]).per(3)
+    # @page = "Projects"
+    @projects = Project.all.order(order: :desc).page(params[:page])#.per(4)
   end
 
   # GET /projects/new

@@ -4,7 +4,7 @@ class V2::PagesController < ApplicationController
 
   def home
     @page = 'Home'
-    @projects = Project.all.order(order: :desc).page(params[:page])#.per(3)
+    @projects = Project.all.order(order: :desc).page(params[:page]).per(2)
   end
 
   def projects

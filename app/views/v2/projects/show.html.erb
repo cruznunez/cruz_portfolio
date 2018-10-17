@@ -1,34 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="slide-2" style="background-image: url(<%= @project.image.link %>)">
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<div class="slide-divider">
+  <h1><%= @project.name %></h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
+  <p>
+    <%= @project.description.html_safe %>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @project.image %>
-</p>
+  <p>
+    <%= @project.additional_information.html_safe %>
+  </p>
 
-<p>
-  <strong>Additional information:</strong>
-  <%= @project.additional_information %>
-</p>
+  <%= render "technologies", project: @project %>
 
-<p>
-  <strong>Repo url:</strong>
-  <%= @project.repo_url %>
-</p>
+  <p>
+    <%= link_to 'Repository', @project.repo_url %>
+  </p>
 
-<p>
-  <strong>Live site:</strong>
-  <%= @project.live_site %>
-</p>
+  <p>
+    <%= link_to 'Live site', @project.live_site %>
+  </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+  <%= link_to 'Edit', edit_v2_project_path(@project) %> |
+  <%= link_to 'Back', v2_root_path %>
+</div>

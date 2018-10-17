@@ -1,7 +1,7 @@
 module ApplicationHelper
   def back
     link = click_area(:back)
-    "<span class='big-button submit'>#{link}Back</span>".html_safe
+    "<span class='big-button submit'><span class='white'>#{link}Back</span></span>".html_safe
   end
 
   def click_area(path)
@@ -17,7 +17,14 @@ module ApplicationHelper
   def destroy(resource)
     thing = resource.class.to_s.downcase
     path = "/#{thing}s/#{resource.id}"
-    button_to "Delete", path, method: :delete, class: "big-button red-button", data: {confirm: "Are you sure you want to delete this #{thing}?"}
+    <<~HTML.html_safe
+      <span class="big-button red-button">
+        <span class="white">
+          #{link_to '<span class="click-area"></span>'.html_safe, path, method: :delete, data: { confirm: "Are you sure you want to delete this #{thing}?"}}
+          Delete
+        </span>
+      </span>
+    HTML
   end
 
   def link tech

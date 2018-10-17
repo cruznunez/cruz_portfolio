@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   namespace :v2 do
     root 'pages#home'
-    resources :projects, except: :show
+    resources :projects
   end
 
 
