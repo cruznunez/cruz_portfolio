@@ -7,12 +7,8 @@ class V2::PagesController < ApplicationController
     @projects = Project.all.order(order: :desc).page(params[:page]).per(2)
   end
 
-  def projects
-    @page = 'Projects'
-  end
-
   def resume
-    @page = 'Resumé'
+    @page = 'Resumé '
   end
 
   def colors

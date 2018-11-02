@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   namespace :v2 do
     root 'pages#home'
+    get 'resume' => 'pages#resume'
     resources :projects
   end
 

@@ -4,7 +4,7 @@ class V2::ProjectsController < ApplicationController
 
   # GET /projects
   def index
-    # @page = "Projects"
+    @page = "Projects "
     @projects = Project.all.order(order: :desc).page(params[:page])#.per(4)
   end
 
