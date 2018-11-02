@@ -16,7 +16,9 @@ gem 'meta-tags'
 gem 'kaminari'
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :production do
-  gem 'pg'
+  # gem 'pg'
+  gem 'pg', '~> 0.18.0' # v1.0 does not work with heroku lol
+
   gem 'rails_12factor'
 end
 group :development, :test do
